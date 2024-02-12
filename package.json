@@ -26,6 +26,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@material/web": "^1.2.0",
     "@stencil/core": "^4.7.0"
   },
   "devDependencies": {
