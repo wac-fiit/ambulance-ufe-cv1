@@ -11,7 +11,8 @@ declare global {
 })
 export class PmiAmbulanceWlApp {
   @State() private relativePath = "";
-
+  @Prop() apiBase: string;
+  @Prop() ambulanceId: string;
   @Prop() basePath: string="";
 
   componentWillLoad() {
@@ -56,7 +57,7 @@ export class PmiAmbulanceWlApp {
         ? <pmi-ambulance-wl-editor entry-id={entryId}
             oneditor-closed={ () => navigate("./list")} >
           </pmi-ambulance-wl-editor>
-        : <pmi-ambulance-wl-list
+        : <pmi-ambulance-wl-list  ambulance-id={this.ambulanceId} api-base={this.apiBase}
             onentry-clicked={ (ev: CustomEvent<string>)=> navigate("./entry/" + ev.detail) } >
           </pmi-ambulance-wl-list>
         }
