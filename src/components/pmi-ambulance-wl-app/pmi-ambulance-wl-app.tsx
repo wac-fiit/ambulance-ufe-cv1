@@ -55,6 +55,7 @@ export class PmiAmbulanceWlApp {
       <Host>
         { element === "editor"
         ? <pmi-ambulance-wl-editor entry-id={entryId}
+            ambulance-id={this.ambulanceId} api-base={this.apiBase}
             oneditor-closed={ () => navigate("./list")} >
           </pmi-ambulance-wl-editor>
         : <pmi-ambulance-wl-list  ambulance-id={this.ambulanceId} api-base={this.apiBase}
