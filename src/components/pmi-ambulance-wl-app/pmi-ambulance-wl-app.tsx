@@ -37,6 +37,7 @@ export class PmiAmbulanceWlApp {
 
 
   render() {
+    console.debug("pmi-ambulance-wl-app.render() - path: %s", this.relativePath);
     let element = "list"
     let entryId = "@new"
   
